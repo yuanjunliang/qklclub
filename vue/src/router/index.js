@@ -10,7 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'QjlHome',
-      component: QjlHome
+      component: QjlHome,
     }
   ]
 })

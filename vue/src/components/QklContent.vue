@@ -1,26 +1,69 @@
 <template>
-  <div class="left-content">
-      <div class="content-list">
-          <ul>
+  <div class="content">
+     <div class="content-list">
+         <ul>
+             <li>
+                 <div>
+                     <h2><a href="#">这是标题</a></h2>
+                     <p>这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落</p>
+                 </div>
+             </li>
+             <li>
+                 <div>
+                     <h2><a href="#">这是标题</a></h2>
+                     <p>这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落</p>
+                 </div>
+             </li>
+             <li>
+                 <div>
+                     <h2><a href="#">这是标题</a></h2>
+                     <p>这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落</p>
+                 </div>
+             </li>
+             <li>
+                 <div>
+                     <h2><a href="#">这是标题</a></h2>
+                     <p>这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落</p>
+                 </div>
+             </li>
+             <li>
+                 <div>
+                     <h2><a href="#">这是标题</a></h2>
+                     <p>这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落</p>
+                 </div>
+             </li>
               <li>
-                  <div class="list-title-content">
-                      <p><a href="http://www.baidu.com">哥俩好</a></p>
-                  </div>
-              </li>
-              <li>列表</li>
-              <li>列表</li>
-              <li>列表</li>
-              <li>列表</li>
-              <li>列表</li>
-              <li>列表</li>
-              <li>列表</li>
-              <li>列表</li>
-              <li>列表</li>
-          </ul>
-      </div>
-      <div class="page">pages</div>
+                 <div>
+                     <h2><a href="#">这是标题</a></h2>
+                     <p>这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落</p>
+                 </div>
+             </li>
+              <li>
+                 <div>
+                     <h2><a href="#">这是标题</a></h2>
+                     <p>这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落</p>
+                 </div>
+             </li>
+              <li>
+                 <div>
+                     <h2><a href="#">这是标题</a></h2>
+                     <p>这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落</p>
+                 </div>
+             </li>
+              <li>
+                 <div>
+                     <h2><a href="#">这是标题</a></h2>
+                     <p>这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落这是文摘段落</p>
+                 </div>
+             </li>
+         </ul>
+     </div>
+     <div class="page-control">
+         分页区域
+     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -28,40 +71,37 @@ export default {
 }
 </script>
 
+
 <style>
-.left-content {
-    float: left;
-    width: 80%;
-    height: 400px;
-    background-color: #998
-}
-
-.content-list ul {
+ul {
     list-style: none;
+    margin-top: 0px;
 }
 
-.content-list ul li {
-    background-color: #964;
-    margin-top: 5px;
-    padding-left: 30px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+.content {
+    height: 100%;
+    position: relative;
+    margin-top: 0px;
+    float: left;
+    width: 79%;
 }
 
-.list-title-content a {
+.content-list {
+    height: 95%;
+    overflow: auto;
+}
+
+a {
     text-decoration: none;
-    color: red;
+    font-size: 20px;
+    color: #886
 }
 
-.list-title-content p {
-    text-align: left;
-}
-
-.left-content .page {
+.page-control {
+    background-color: yellow;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 0px;
     width: 100%;
-    height: 30px;
-    margin-bottom: 10px;
-    background-color: purple
 }
 </style>
-

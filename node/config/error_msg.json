@@ -1,0 +1,12 @@
+{
+    "error_0": { "code": "0", "error_msg": "ok" },
+    "error_10001": { "code": "10001", "error_msg": "注册失败" },
+    "error_10002": { "code": "10002", "error_msg": "用户已注册" },
+    "error_10003": { "code": "10003", "error_msg": "用户未注册" },
+    "error_10004": { "code": "10004", "error_msg": "用户名或密码不正确" },
+    "error_10005": { "code": "10005", "error_msg": "手机号不正确" },
+    "error_10006": { "code": "10006", "error_msg": "密码格式不正确" },
+    "error_10007": { "code": "10007", "error_msg": "注册成功" },
+    "error_10008": { "code": "10008", "error_msg": "没有传api_name"},
+    "error_10009": { "code": "10009", "error_msg": "接口名称不存在"}
+}
