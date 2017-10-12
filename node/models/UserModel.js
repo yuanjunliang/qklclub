@@ -1,21 +1,14 @@
- const Sequelize = require('Sequelize');
- const sequelize = require('../common/db').sequelize;
+const mongoose = require('mongoose');
+const mongo_db = db.mongo_db;
 
- const UserModel = sequelize.define("users", {
-     username: { type: Sequelize.STRING },
-     password: { type: Sequelize.STRING, allowNull: false },
-     user_id: { type: Sequelize.STRING, primaryKey: true, unique: true },
-     telphone: { type: Sequelize.STRING, unique: true },
-     create_time: { type: Sequelize.DATE, defaultValue: Sequelize.NOW },
-     province: { type: Sequelize.STRING },
-     city: { type: Sequelize.STRING },
-     country: { type: Sequelize.STRING },
-     address: { type: Sequelize.STRING }
- });
+const schema = {
+    user_id: { type: String, required: true, unique: true },
+    username: { type: String, required: true },
+    password: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    icon: String
+}
 
- /**
-  * 同步表结构
-  */
- UserModel.sync({ force: false });
-
- module.exports = UserModel;
+// 注意，这里需要用mongoose生成的数据库来创建model
+const UserModel = mongo_db.model('users', mongoose.Schema(schema));
+module.exports = UserModel;

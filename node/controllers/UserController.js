@@ -1,58 +1,27 @@
 const UserModel = require('../models/UserModel');
+const md5 = require('../tools/JLCrypto').md5;
+const uuid = require('node-uuid');
 
-
-/**
- * 增加
- */
 exports.user_add = (req, res, next) => {
     let params = req.body;
+    let email = params.email;
+    let username = params.username;
+    let password = params.password;
 
-    console.log("用户注册添加")
-    console.log({
-        params
-    })
     UserModel.create({
-            username: "yuanjunliang",
-            password: "john"
-        })
-        .then(task => {
-            if (task) {
-                res.send("注册成功");
-            } else {
-                res.send("注册失败");
-            }
-        })
-}
-
-/**
- * 修改
- */
-exports.user_update = (req, res, next) => {
-    UserModel.update({ password: "test" }, { where: { username: "yuanjunliang", password: "john" } }).then(() => {
-        res.send("更新成功")
+        user_id: uuid.v1(),
+        username: username,
+        password: md5(password),
+        email: email
+    }, (error, response) => {
+        if (error) {
+            JLSend.send_sys_error(error, req.body.api_name, res);
+        } else {
+            JLSend.send('0', req.body.api_name, res);
+        }
     })
 }
 
-/**
- * 查询
- */
-exports.find_user_info = (req, res, next) => {
-    UserModel.findOne({ where: { username: "yuanjunliang" } })
-        .then((result) => {
-            res.send({
-                result: result
-            })
-        })
-}
+exports.user_login = (req, res) => {}
 
-/**
- * 删除
- */
-exports.delete_user = (req, res, next) => {
-    UserModel.destroy({ where: { username: "yuanjunliang" } })
-        .then((result) => {
-            res.send({
-                result: result
-            })
-        })
-}
+exports.user_edit = (req, res) => {}

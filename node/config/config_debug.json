@@ -5,5 +5,13 @@
         "username": "root",
         "password": "root",
         "database": "club"
+    },
+    "mongo_db1": {
+        "path": "mongodb://192.168.232.130/club",
+        "options": {
+            "user": "club",
+            "pass": "123456",
+            "port": 27017
+        }
     }
 }

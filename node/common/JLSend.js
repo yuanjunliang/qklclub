@@ -7,7 +7,7 @@ const error_msg_code = require('../config/error_msg.json');
  * res
  * response:当有返回response的时候可以填写，没有的时候可以不填
  */
-exports.ressend = (error_code, api_name, res, response) => {
+exports.send = (error_code, api_name, res, response) => {
     if (typeof response == undefined) {
         res.send({
             api_name: api_name,
@@ -25,7 +25,7 @@ exports.ressend = (error_code, api_name, res, response) => {
 /**
  * 系统错误的返回
  */
-exports.ressend_sys_error = (error, api_name, res) => {
+exports.send_sys_error = (error, api_name, res) => {
     res.send({
         error_info: {
             code: "10001",
