@@ -3,12 +3,10 @@
     <div class="header">
       <qkl-header></qkl-header>
     </div>
+     <router-view></router-view>
     <div class="content-center">
       <qkl-content></qkl-content>
       <qkl-side-bar></qkl-side-bar>
-    </div>
-    <div class="footer">
-      <qkl-footer></qkl-footer>
     </div>
   </div>
 </template>
@@ -33,13 +31,13 @@ export default {
 <style>
 .content-center {
   margin-top: 10px;
-  height: 600px;
+  height: auto;
 }
 
-.footer {
+/* .footer {
   height: 50px;
   background-color: yellow;
   margin-top: 10px;
-}
+} */
 </style>
 

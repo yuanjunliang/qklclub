@@ -5,14 +5,15 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
+import global from './common/global'
 Vue.config.productionTip = false
-// 注册组件
+    // 注册组件
 Vue.use(ElementUI)
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App}
+    el: '#app',
+    router,
+    template: '<App/>',
+    components: { App }
 })
