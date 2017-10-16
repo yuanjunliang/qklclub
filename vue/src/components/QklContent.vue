@@ -81,6 +81,7 @@ export default {
 <style>
 ul {
     list-style: none;
+    font-size: 15px;
 }
 
 .content {
@@ -94,7 +95,7 @@ ul {
     overflow: auto;
 }
 
-a {
+ul li a {
     text-decoration: none;
     font-size: 20px;
     color: #886

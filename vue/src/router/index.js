@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import QklHome from '@/vues/QklHome'
-import QklLogin from '@/vues/QklLogin'
+import QklRegist from '@/vues/QklRegist'
+import QklAdminIndex from '@/vues/admin/QklAdminIndex'
+
 
 Vue.use(Router)
 
@@ -13,9 +15,14 @@ export default new Router({
             component: QklHome
         },
         {
-            path: '/login',
-            name: 'QklLogin',
-            component: QklLogin
+            path: '/regist',
+            name: 'QklRegist',
+            component: QklRegist
+        },
+        {
+            path: '/admin',
+            name: 'QklAdminIndex',
+            component: QklAdminIndex
         }
     ]
 })

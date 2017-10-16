@@ -6,6 +6,7 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import global from './common/global'
+
 Vue.config.productionTip = false
     // 注册组件
 Vue.use(ElementUI)

@@ -3,7 +3,7 @@ export default (path, method, params) => {
     let methodUpStr = method.toUpperCase(); // 统一转换成大写
 
     let requestParams = {
-        method: method,
+        method: methodUpStr,
         headers: {
             'Content-Type': 'application/json'
         }

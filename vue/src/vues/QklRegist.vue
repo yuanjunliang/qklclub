@@ -7,6 +7,7 @@
             <div><h4>注册</h4></div>
             <div class="login-content">
                 <el-form ref="form" label-width='100px' :model='form'>
+                    <el-form-item label="email"><el-input v-model="form.email"></el-input></el-form-item>
                     <el-form-item label="用户名"><el-input v-model="form.username"></el-input></el-form-item>
                     <el-form-item label="密码"><el-input v-model="form.password" type='password' auto-complete='on'></el-input></el-form-item>
                 </el-form>
@@ -18,12 +19,13 @@
 
 <script>
 export default {
-  name:'login',
+  name:'QklRegist',
   data(){
       return{
           form:{
               username:'',
-              password:''
+              password:'',
+              email:''
           }
       }
   },
@@ -31,14 +33,13 @@ export default {
       registButtonClick(){
         let params  ={
             username:this.form.username,
-            password:this.form.password
+            password:this.form.password,
+            email:this.form.email
         }
 
-        JLFetch('/user/user_add','Get',params)
+        JLFetch('/user/user_add','POST',params)
         .then(responseData=>{
-            console.log({
-                responseData
-            })
+            this.$router.push({path:'/'})
         })
       }
   }
