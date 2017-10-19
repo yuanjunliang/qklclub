@@ -25,11 +25,10 @@
 <script>
 export default {
   name:'QklLogin',
-  props:['dialogFormVisible'],
   data(){
     return{
       dialogTableVisible: false,
-        dialogFormVisible: false,
+        dialogFormVisible: true,
         form: {
           name: '',
           region: '',

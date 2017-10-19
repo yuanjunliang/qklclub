@@ -82,6 +82,7 @@ export default {
 ul {
     list-style: none;
     font-size: 15px;
+    line-height: 40px;
 }
 
 .content {
@@ -89,6 +90,8 @@ ul {
     float: left;
     width: 79%;
     margin-bottom: 30px;
+    /* margin-left: 30px; */
+    /* text-align: left; */
 }
 
 .content-list {

@@ -13,9 +13,27 @@
         <el-menu-item index='0'>登录</el-menu-item>
         <el-menu-item index='-1'><router-link to="/regist">注册</router-link></el-menu-item>
       </el-menu>
+
+
       <div>
-        <qkl-login :dialogFormVisible=dialogFormVisible></qkl-login>
-      </div>
+        <el-dialog title="收货地址" :visible.sync="dialogFormVisible">
+          <el-form :model="form">
+            <el-form-item label="活动名称" :label-width="formLabelWidth">
+              <el-input v-model="form.name" auto-complete="off"></el-input>
+            </el-form-item>
+            <el-form-item label="活动区域" :label-width="formLabelWidth">
+              <el-select v-model="form.region" placeholder="请选择活动区域">
+                <el-option label="区域一" value="shanghai"></el-option>
+                <el-option label="区域二" value="beijing"></el-option>
+              </el-select>
+            </el-form-item>
+          </el-form>
+          <div slot="footer" class="dialog-footer">
+            <el-button @click="dialogFormVisible = false">取 消</el-button>
+            <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+          </div>
+        </el-dialog>
+      </div>  
   </div>
 </template>
 
@@ -26,8 +44,7 @@ export default {
   name: 'QklHeader',
   data(){
     return{
-       dialogTableVisible: false,
-        dialogFormVisible: false,
+       dialogFormVisible: false,
         form: {
           name: '',
           region: '',
@@ -44,22 +61,13 @@ export default {
   methods:{
     handleSelect(key,keyPath){
       if(key==0){
-       this.createLoginVue()
+        thsi.dialogFormVisible = true
       }
       console.log({
         key,
         keyPath
       })
-    },
-    createLoginVue(){
-      this.dialogFormVisible = true;
-      console.log({
-        dialogFormVisible:this.dialogFormVisible
-      })
     }
-  },
-  components:{
-    QklLogin
   }
 }
 </script>
